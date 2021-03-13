@@ -1,0 +1,41 @@
+﻿<!doctype html>
+
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<meta charset="UTF-8">
+	<title>The dev forgot to change this element</title>
+	<link rel="stylesheet" type="text/css" href="flow_style.css">
+	<script type="text/javascript" src="flow_diag.js"></script>
+</head>
+
+<body style="margin:0;">
+	<div id="editor" style="width:100%; height:800px;"></div>
+	<div style="margin:15px;">
+		<button onclick="updateJSON()">Get JSON</button>
+		<button onclick="setJSON()">Set JSON</button><br>
+		<form action="javascript:void(0);">
+			<label for="darkmode"> Dark Mode</label>
+			<input type="checkbox" id="darkmode_sel" name="darkmode" onchange="setDarkMode(this)">
+		</form>
+	
+		<textarea id="json", style="width:90%; height:40px;"></textarea>
+	</div>
+	<script>
+		diagram = new Diagram(document.getElementById("editor"));
+		function updateJSON(){
+			document.getElementById("json").value = diagram.exportJSON();
+		}
+		function setJSON(){
+			diagram.loadJSON(document.getElementById("json").value);
+		}
+		function setDarkMode(checkbox){
+			diagram.setDarkMode(checkbox.checked);
+		}
+	</script>
+
+</body>
+
+
+
+</html>
