@@ -21,14 +21,14 @@ Currently, parameters are one of four types. Each parameter is defined by a JSON
 {"name": "<name>","type": "string_field", "default":"<default_string>",
     "tooltip":"<text>"}
 
-{"name": "<name>", "type": "num_field", "default":<default_num>,
-    "min":<minimum>, "max":<maximum>,"step":<resolution>, "tooltip":"<text>"}
+{"name": "<name>", "type": "num_field", "default":"<default_num>",
+    "min":"<minimum>", "max":"<maximum>","step":"<resolution>", "tooltip":"<text>"}
 
 {"name": "<name>", "type": "dropdown",
-    "options":["<option1>", ...], "tooltip":"<text>"}
+    "options":["<option1>", "..."], "tooltip":"<text>"}
 
 {"name": "<name>", "type": "boolean",
-    "default":<true/false>, "tooltip":"<text>"}
+    "default":"<true/false>", "tooltip":"<text>"}
 ```
 
 ![template parameters](imagesrc_md/template_params.gif)
